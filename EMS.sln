@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{76584B37-359A-46F7-AD9B-376106BA3692}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMS.Web", "src\EMS.Web\EMS.Web.csproj", "{7BB09E97-AB55-436F-AF22-58EC5B5830BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMS.Core", "src\EMS.Core\EMS.Core.csproj", "{5991A323-90D2-4BDF-9A5A-2E932CE873CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7BB09E97-AB55-436F-AF22-58EC5B5830BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BB09E97-AB55-436F-AF22-58EC5B5830BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BB09E97-AB55-436F-AF22-58EC5B5830BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BB09E97-AB55-436F-AF22-58EC5B5830BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5991A323-90D2-4BDF-9A5A-2E932CE873CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5991A323-90D2-4BDF-9A5A-2E932CE873CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5991A323-90D2-4BDF-9A5A-2E932CE873CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5991A323-90D2-4BDF-9A5A-2E932CE873CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7BB09E97-AB55-436F-AF22-58EC5B5830BF} = {76584B37-359A-46F7-AD9B-376106BA3692}
+		{5991A323-90D2-4BDF-9A5A-2E932CE873CB} = {76584B37-359A-46F7-AD9B-376106BA3692}
+	EndGlobalSection
+EndGlobal

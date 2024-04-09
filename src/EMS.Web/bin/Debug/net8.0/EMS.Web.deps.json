@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "EMS.Web/1.0.0": {
+        "dependencies": {
+          "EMS.Core": "1.0.0"
+        },
+        "runtime": {
+          "EMS.Web.dll": {}
+        }
+      },
+      "EMS.Core/1.0.0": {
+        "runtime": {
+          "EMS.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EMS.Web/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EMS.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

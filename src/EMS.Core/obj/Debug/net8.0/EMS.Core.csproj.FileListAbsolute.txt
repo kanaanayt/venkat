@@ -1,0 +1,11 @@
+/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Core/bin/Debug/net8.0/EMS.Core.deps.json
+/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Core/bin/Debug/net8.0/EMS.Core.dll
+/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Core/bin/Debug/net8.0/EMS.Core.pdb
+/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Core/obj/Debug/net8.0/EMS.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Core/obj/Debug/net8.0/EMS.Core.AssemblyInfoInputs.cache
+/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Core/obj/Debug/net8.0/EMS.Core.AssemblyInfo.cs
+/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Core/obj/Debug/net8.0/EMS.Core.csproj.CoreCompileInputs.cache
+/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Core/obj/Debug/net8.0/EMS.Core.dll
+/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Core/obj/Debug/net8.0/refint/EMS.Core.dll
+/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Core/obj/Debug/net8.0/EMS.Core.pdb
+/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Core/obj/Debug/net8.0/ref/EMS.Core.dll

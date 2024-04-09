@@ -1,0 +1,34 @@
+@page "/employees"
+@using EMS.Core
+@using EMS.Web.Services;
+
+@if (Departments == null)  return;
+
+@foreach (var department in Departments)
+{
+    <ul>
+        <li>@department.Id</li>
+        <li>@department.DepartmentName</li>
+        <li>@department.DepartmentSize</li>
+        @foreach (var employee in department.Employees)
+        {
+            <li>@employee.Id</li>
+            <li>@employee.FullName</li>
+            <li>@employee.Email</li>
+            <li>@employee.DateOfBirth</li>
+            <li>@employee.Gender</li>
+            <li>@employee.DepartmentId</li>
+            <li>@employee.PhotoPath</li>
+        }
+    </ul>
+    <br />
+}
+
+@code
+{
+    public IEnumerable<rDepartment> Departments { get; set; }
+    protected override void OnInitialized()
+    {
+        Departments = HardCodedData.Departments;
+    }
+}
