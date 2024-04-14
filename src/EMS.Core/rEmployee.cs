@@ -9,7 +9,7 @@ public class rEmployee
 
     public string Email { get; set; } = string.Empty;
 
-    public DateTime DateOfBirth { get; set; }
+    public DateTime JoinDate { get; set; }
 
     public rGender Gender { get; set; }
 

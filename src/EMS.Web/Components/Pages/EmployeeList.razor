@@ -6,22 +6,34 @@
 
 @foreach (var department in Departments)
 {
-    <ul>
-        <li>@department.Id</li>
-        <li>@department.DepartmentName</li>
-        <li>@department.DepartmentSize</li>
-        @foreach (var employee in department.Employees)
-        {
-            <li>@employee.Id</li>
-            <li>@employee.FullName</li>
-            <li>@employee.Email</li>
-            <li>@employee.DateOfBirth</li>
-            <li>@employee.Gender</li>
-            <li>@employee.DepartmentId</li>
-            <li>@employee.PhotoPath</li>
-        }
-    </ul>
-    <br />
+    <div class="container-fluid">
+        <div class="row">
+            <h2>Department @department.Id</h2>
+            <h2>@department.DepartmentName</h2>
+            <h2>totals @department.DepartmentSize employees</h2>
+        </div>
+        <div class="card-deck container-w50 row">
+            
+            @foreach (var employee in department.Employees)
+            {
+                <div class="card" style="width: 18rem;">
+                    <div class="card-header">
+                        <h5>@employee.FullName</h5>
+                        <h5>@(Departments.SingleOrDefault(d => d.Id == employee.DepartmentId).DepartmentName)</h5>
+                    </div>
+                    
+                    <img class="card-img-top" src=@employee.PhotoPath>
+                    
+                    <div class="card-footer text-center">
+                        <a href="#" class="btn btn-primary">View</a>
+                        <a href="#" class="btn btn-primary">Edit</a>
+                        <a href="#" class="btn btn-danger">Delete</a>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
 }
 
 @code

@@ -26,7 +26,7 @@ public static class HardCodedData
                 DepartmentName = "HR",
                 Employees = new List<rEmployee>
                 {
-                    _employees[0]
+                    _employees[0], _employees[5]
                 }
             },
             new rDepartment
@@ -35,7 +35,7 @@ public static class HardCodedData
                 DepartmentName = "IT",
                 Employees = new List<rEmployee>
                 {
-                    _employees[1]
+                    _employees[1], _employees[4]
                 }
             },
             new rDepartment
@@ -57,13 +57,13 @@ public static class HardCodedData
             new rEmployee
             {
                 Id = 1,
-                FirstName = "John",
+                FirstName = "Harry",
                 LastName = "Smith",
                 Email = "johnsmith@gmail.com",
-                DateOfBirth = new DateTime(1995, 12, 24),
+                JoinDate = new DateTime(2020, 12, 24),
                 Gender = rGender.Male,
                 DepartmentId = 1,
-                PhotoPath = "images/john.png"
+                PhotoPath = "images/harry.png"
             },
             new rEmployee
             {
@@ -71,7 +71,7 @@ public static class HardCodedData
                 FirstName = "Mary",
                 LastName = "Sutherland",
                 Email = "marysutherland@gmail.com",
-                DateOfBirth = new DateTime(1990, 4, 21),
+                JoinDate = new DateTime(2022, 4, 21),
                 Gender = rGender.Female,
                 DepartmentId = 2,
                 PhotoPath = "images/mary.png"
@@ -82,7 +82,7 @@ public static class HardCodedData
                 FirstName = "Sam",
                 LastName = "Fallon",
                 Email = "samfallon@gmail.com",
-                DateOfBirth = new DateTime(1988, 8, 14),
+                JoinDate = new DateTime(2023, 8, 14),
                 Gender = rGender.Other,
                 DepartmentId = 3,
                 PhotoPath = "images/sam.png"
@@ -90,13 +90,35 @@ public static class HardCodedData
             new rEmployee
             {
                 Id = 4,
-                FirstName = "Harry",
-                LastName = "Brown",
-                Email = "harrybrown@gmail.com",
-                DateOfBirth = new DateTime(1996, 5, 2),
+                FirstName = "Fin",
+                LastName = "Harrington",
+                Email = "finharrington@gmail.com",
+                JoinDate = new DateTime(2019, 5, 2),
                 DepartmentId = 3,
                 Gender = rGender.Male,
                 PhotoPath = "images/harry.png"
+            },
+            new rEmployee
+            {
+                Id = 5,
+                FirstName = "Max",
+                LastName = "Snipe",
+                Email = "maxsnipe@gmail.com",
+                JoinDate = new DateTime(2017, 9, 2),
+                DepartmentId = 2,
+                Gender = rGender.Male,
+                PhotoPath = "images/max.png"
+            },
+            new rEmployee
+            {
+                Id = 4,
+                FirstName = "Wesley",
+                LastName = "Kemp",
+                Email = "wesleykemp@gmail.com",
+                JoinDate = new DateTime(2015, 1, 2),
+                DepartmentId = 1,
+                Gender = rGender.Male,
+                PhotoPath = "images/wesley.png"
             }
         };
     }
