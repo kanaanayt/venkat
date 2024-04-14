@@ -16,7 +16,7 @@
             
             @foreach (var employee in department.Employees)
             {
-                <div class="card" style="width: 18rem;">
+                <div class="card m-4" style="width: 18rem;">
                     <div class="card-header">
                         <h5>@employee.FullName</h5>
                         <h5>@(Departments.SingleOrDefault(d => d.Id == employee.DepartmentId).DepartmentName)</h5>

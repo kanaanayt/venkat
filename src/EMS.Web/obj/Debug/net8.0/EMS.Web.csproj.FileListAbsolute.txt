@@ -65,3 +65,4 @@
 /Users/kanaan/Documents/GitHub/venkat/src/EMS.Web/obj/Debug/net8.0/EMS.Web.csproj.Up2Date
 /Users/kanaan/Documents/GitHub/venkat/src/EMS.Web/obj/Debug/net8.0/EMS.Web.genruntimeconfig.cache
 /Users/kanaan/Documents/GitHub/venkat/src/EMS.Web/obj/Debug/net8.0/ref/EMS.Web.dll
+/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Web/obj/Debug/net8.0/EMS.Web.sourcelink.json
