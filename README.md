@@ -18,3 +18,8 @@ https://github.com/kanaanayt/venkat/blob/3182deb94a97abff51edc7844e7bdd35566ccfc
 https://github.com/kanaanayt/venkat/blob/3182deb94a97abff51edc7844e7bdd35566ccfc1/src/EMS.Web/Services/HardCodedData.cs#L19-L51
 ### Employee Initialization
 https://github.com/kanaanayt/venkat/blob/3182deb94a97abff51edc7844e7bdd35566ccfc1/src/EMS.Web/Services/HardCodedData.cs#L53-L124
+
+# Pages
+## EmployeeList page
+### Must place images in wwwroot/images folder
+https://github.com/kanaanayt/venkat/blob/34d12b41d31b0c7413a5ac1ef017f805a67451ae/src/EMS.Web/Components/Pages/EmployeeList.razor#L5-L46
