@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EMS.Core\EMS.Core.csproj" />
+    <ProjectReference Include="..\EMS.Api\EMS.Api.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
