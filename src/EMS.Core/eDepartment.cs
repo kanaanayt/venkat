@@ -6,5 +6,5 @@ public class eDepartment
 
     public string DepartmentName { get; set; }
 
-    public List<eEmployee> Employees { get; set; }
+    public ICollection<eEmployee> Employees { get; set; }
 }

@@ -14,6 +14,7 @@ public class eEmployee
     public eGender Gender { get; set; }
 
     public int DepartmentId { get; set; }
+    public Department? Department { get; set; }
 
     public string PhotoPath { get; set; } = string.Empty;
 }
