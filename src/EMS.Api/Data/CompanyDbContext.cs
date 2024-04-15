@@ -2,13 +2,12 @@ namespace EMS.Api.Data;
 
 public class CompanyDbContext : DbContext
 {
-    public DbSet<eEmployee> Employees { get; set; }
     public DbSet<eDepartment> Departments { get; set; }
+    public DbSet<eEmployee> Employees { get; set; }
 
     public CompanyDbContext(DbContextOptions options)
     : base(options)
     {
-
     }
 
     protected override void OnModelCreating(Modelbuilder modelBuilder)
@@ -18,7 +17,13 @@ public class CompanyDbContext : DbContext
             etb.HasOne(e => e.Department)
                .WithMany(d => d.Employees)
                .HasForeignKey(e => e.DepartmentId);
-        })
+        });
+
+        modelBuilder.Entity<eDepartment>().HasData(
+            new eDepartment { Id = 1, DepartmentName = "HR" },
+            new eDepartment { Id = 2, DepartmentName = "IT" },
+            new eDepartment { Id = 3, DepartmentName = "Admin" }
+        );
 
         modelBuilder.Entity<eEmployee>().HasData(
             new eEmployee {
@@ -76,12 +81,6 @@ public class CompanyDbContext : DbContext
                 Gender = rGender.Male,
                 PhotoPath = "images/wesley.png"
             }
-        );
-
-        modelBuilder.Entity<eDepartment>().HasData(
-            new eDepartment { Id = 1, DepartmentName = "HR" },
-            new eDepartment { Id = 2, DepartmentName = "IT" },
-            new eDepartment { Id = 3, DepartmentName = "Admin" }
         );
     }
 }

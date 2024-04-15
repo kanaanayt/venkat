@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Api/EMS.Api.csproj": {}
+    "/Users/kanaan/Documents/GitHub/venkat/src/EMS.Api/EMS.Api.csproj": {}
   },
   "projects": {
-    "/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Api/EMS.Api.csproj": {
+    "/Users/kanaan/Documents/GitHub/venkat/src/EMS.Api/EMS.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Api/EMS.Api.csproj",
+        "projectUniqueName": "/Users/kanaan/Documents/GitHub/venkat/src/EMS.Api/EMS.Api.csproj",
         "projectName": "EMS.Api",
-        "projectPath": "/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Api/EMS.Api.csproj",
+        "projectPath": "/Users/kanaan/Documents/GitHub/venkat/src/EMS.Api/EMS.Api.csproj",
         "packagesPath": "/Users/kanaan/.nuget/packages/",
-        "outputPath": "/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Api/obj/",
+        "outputPath": "/Users/kanaan/Documents/GitHub/venkat/src/EMS.Api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/kanaan/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Core/EMS.Core.csproj": {
-                "projectPath": "/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Core/EMS.Core.csproj"
+              "/Users/kanaan/Documents/GitHub/venkat/src/EMS.Core/EMS.Core.csproj": {
+                "projectPath": "/Users/kanaan/Documents/GitHub/venkat/src/EMS.Core/EMS.Core.csproj"
               }
             }
           }
@@ -50,6 +50,10 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
@@ -89,14 +93,14 @@
         }
       }
     },
-    "/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Core/EMS.Core.csproj": {
+    "/Users/kanaan/Documents/GitHub/venkat/src/EMS.Core/EMS.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Core/EMS.Core.csproj",
+        "projectUniqueName": "/Users/kanaan/Documents/GitHub/venkat/src/EMS.Core/EMS.Core.csproj",
         "projectName": "EMS.Core",
-        "projectPath": "/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Core/EMS.Core.csproj",
+        "projectPath": "/Users/kanaan/Documents/GitHub/venkat/src/EMS.Core/EMS.Core.csproj",
         "packagesPath": "/Users/kanaan/.nuget/packages/",
-        "outputPath": "/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Core/obj/",
+        "outputPath": "/Users/kanaan/Documents/GitHub/venkat/src/EMS.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/kanaan/.nuget/NuGet/NuGet.Config"
