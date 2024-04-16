@@ -33,8 +33,20 @@ https://github.com/kanaanayt/venkat/blob/34d12b41d31b0c7413a5ac1ef017f805a67451a
 #### set up project references and add appsettings.json connection string
 
 ## Gender entity
-https://github.com/kanaanayt/venkat/blob/ee8cb27550baab96904ecf09f6ed94d5d96481f6/src/EMS.Core/eGendercs#L3-L10
+https://github.com/kanaanayt/venkat/blob/ca8c4719832805c647b6b9c7a51b977d07796fff/src/EMS.Core/eGender.cs#L3-L10
 ## Employee entity
 https://github.com/kanaanayt/venkat/blob/ee8cb27550baab96904ecf09f6ed94d5d96481f6/src/EMS.Core/eEmployee.cs#L3-L20
 ## Department entity
 https://github.com/kanaanayt/venkat/blob/ee8cb27550baab96904ecf09f6ed94d5d96481f6/src/EMS.Core/eDepartment.cs#L3-L10
+
+## Db Context 
+### Scaffolding
+https://github.com/kanaanayt/venkat/blob/ca8c4719832805c647b6b9c7a51b977d07796fff/src/EMS.Api/Data/CompanyDbContext.cs#L6-L22
+### Seeding
+https://github.com/kanaanayt/venkat/blob/6544d57fe21f73e8ffb67c249f9fb0dad927bd33/src/EMS.Api/Data/CompanyDbContext.cs#L24-L86
+
+### Dependency Injection
+https://github.com/kanaanayt/venkat/blob/40bcb478388c8491816365895cb124eeacd19e9e/src/EMS.Api/Program.cs#L10-L13
+
+### Connection string
+https://github.com/kanaanayt/venkat/blob/6544d57fe21f73e8ffb67c249f9fb0dad927bd33/src/EMS.Api/appsettings.json#L2-L4
