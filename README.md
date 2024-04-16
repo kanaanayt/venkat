@@ -33,7 +33,7 @@ https://github.com/kanaanayt/venkat/blob/34d12b41d31b0c7413a5ac1ef017f805a67451a
 #### set up project references and add appsettings.json connection string
 
 ## Gender entity
-https://github.com/kanaanayt/venkat/blob/ee8cb27550baab96904ecf09f6ed94d5d96481f6/src/EMS.Core/eGendercs#L3-L10
+https://github.com/kanaanayt/venkat/blob/ee8cb27550baab96904ecf09f6ed94d5d96481f6/src/EMS.Core/eGender.cs#L3-L10
 ## Employee entity
 https://github.com/kanaanayt/venkat/blob/ee8cb27550baab96904ecf09f6ed94d5d96481f6/src/EMS.Core/eEmployee.cs#L3-L20
 ## Department entity
