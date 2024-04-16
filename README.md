@@ -49,3 +49,9 @@ https://github.com/kanaanayt/venkat/blob/40bcb478388c8491816365895cb124eeacd19e9
 
 ### Connection string
 https://github.com/kanaanayt/venkat/blob/91fdfd94831b8247bd16758ec6bf3d2d6f78371c/src/EMS.Api/appsettings.json#L2-L4
+
+### Migrate and update database
+```
+dotnet ef migrations add InitialCreate --project src/EMS.Api
+dotnet ef database update --project src/EMS.Api
+``` 
