@@ -25,14 +25,16 @@ https://github.com/kanaanayt/venkat/blob/3182deb94a97abff51edc7844e7bdd35566ccfc
 https://github.com/kanaanayt/venkat/blob/34d12b41d31b0c7413a5ac1ef017f805a67451ae/src/EMS.Web/Components/Pages/EmployeeList.razor#L5-L46
 
 # API
-#### Install Microsoft.EntityFrameworkCore.Sqlite, Microsoft.EntityFrameworkCore.Tools, Microsoft.EntityFrameworkCore
-#### set up project references
-#### create entities
-#### add appsettings.json connection string
+#### Install the following
+##### Microsoft.EntityFrameworkCore.Sqlite
+##### Microsoft.EntityFrameworkCore.Tools
+##### Microsoft.EntityFrameworkCore
 
-## Gender model
+#### set up project references and add appsettings.json connection string
+
+## Gender entity
 https://github.com/kanaanayt/venkat/blob/ee8cb27550baab96904ecf09f6ed94d5d96481f6/src/EMS.Core/eGendercs#L3-L10
-## Employee model
+## Employee entity
 https://github.com/kanaanayt/venkat/blob/ee8cb27550baab96904ecf09f6ed94d5d96481f6/src/EMS.Core/eEmployee.cs#L3-L20
-## Department model
+## Department entity
 https://github.com/kanaanayt/venkat/blob/ee8cb27550baab96904ecf09f6ed94d5d96481f6/src/EMS.Core/eDepartment.cs#L3-L10
