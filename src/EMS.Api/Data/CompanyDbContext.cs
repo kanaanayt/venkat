@@ -8,7 +8,7 @@ public class CompanyDbContext : DbContext
     public DbSet<eDepartment> Departments { get; set; }
     public DbSet<eEmployee> Employees { get; set; }
 
-    public CompanyDbContext(DbContextOptions options) : base(options)
+    public CompanyDbContext(DbContextOptions<CompanyDbContext> options) : base(options)
     {
     }
 
@@ -74,7 +74,7 @@ public class CompanyDbContext : DbContext
                 Gender = eGender.Male,
                 PhotoPath = "images/max.png"
             }, new eEmployee {
-                Id = 4,
+                Id = 6,
                 FirstName = "Wesley",
                 LastName = "Kemp",
                 Email = "wesleykemp@gmail.com",
