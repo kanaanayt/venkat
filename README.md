@@ -43,10 +43,9 @@ https://github.com/kanaanayt/venkat/blob/ee8cb27550baab96904ecf09f6ed94d5d96481f
 ### Scaffolding
 https://github.com/kanaanayt/venkat/blob/ca8c4719832805c647b6b9c7a51b977d07796fff/src/EMS.Api/Data/CompanyDbContext.cs#L6-L22
 ### Seeding
-https://github.com/kanaanayt/venkat/blob/6544d57fe21f73e8ffb67c249f9fb0dad927bd33/src/EMS.Api/Data/CompanyDbContext.cs#L24-L86
-
+https://github.com/kanaanayt/venkat/blob/91fdfd94831b8247bd16758ec6bf3d2d6f78371c/src/EMS.Api/Data/CompanyDbContext.cs#L24-L86
 ### Dependency Injection
 https://github.com/kanaanayt/venkat/blob/40bcb478388c8491816365895cb124eeacd19e9e/src/EMS.Api/Program.cs#L10-L13
 
 ### Connection string
-https://github.com/kanaanayt/venkat/blob/6544d57fe21f73e8ffb67c249f9fb0dad927bd33/src/EMS.Api/appsettings.json#L2-L4
+https://github.com/kanaanayt/venkat/blob/91fdfd94831b8247bd16758ec6bf3d2d6f78371c/src/EMS.Api/appsettings.json#L2-L4
