@@ -1,3 +1,6 @@
+using EMS.Core;
+using Microsoft.EntityFrameworkCore;
+
 namespace EMS.Api.Data;
 
 public class CompanyDbContext : DbContext
@@ -5,12 +8,11 @@ public class CompanyDbContext : DbContext
     public DbSet<eDepartment> Departments { get; set; }
     public DbSet<eEmployee> Employees { get; set; }
 
-    public CompanyDbContext(DbContextOptions options)
-    : base(options)
+    public CompanyDbContext(DbContextOptions options) : base(options)
     {
     }
 
-    protected override void OnModelCreating(Modelbuilder modelBuilder)
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<eEmployee>(etb =>
         {
@@ -32,7 +34,7 @@ public class CompanyDbContext : DbContext
                 LastName = "Smith",
                 Email = "johnsmith@gmail.com",
                 JoinDate = new DateTime(2020, 12, 24),
-                Gender = rGender.Male,
+                Gender = eGender.Male,
                 DepartmentId = 1,
                 PhotoPath = "images/harry.png" 
             }, new eEmployee {
@@ -41,7 +43,7 @@ public class CompanyDbContext : DbContext
                 LastName = "Sutherland",
                 Email = "marysutherland@gmail.com",
                 JoinDate = new DateTime(2022, 4, 21),
-                Gender = rGender.Female,
+                Gender = eGender.Female,
                 DepartmentId = 2,
                 PhotoPath = "images/mary.png"
             }, new eEmployee {
@@ -50,7 +52,7 @@ public class CompanyDbContext : DbContext
                 LastName = "Fallon",
                 Email = "samfallon@gmail.com",
                 JoinDate = new DateTime(2023, 8, 14),
-                Gender = rGender.Other,
+                Gender = eGender.Other,
                 DepartmentId = 3,
                 PhotoPath = "images/sam.png"
             }, new eEmployee {
@@ -60,7 +62,7 @@ public class CompanyDbContext : DbContext
                 Email = "finharrington@gmail.com",
                 JoinDate = new DateTime(2019, 5, 2),
                 DepartmentId = 3,
-                Gender = rGender.Male,
+                Gender = eGender.Male,
                 PhotoPath = "images/harry.png"
             }, new eEmployee {
                 Id = 5,
@@ -69,7 +71,7 @@ public class CompanyDbContext : DbContext
                 Email = "maxsnipe@gmail.com",
                 JoinDate = new DateTime(2017, 9, 2),
                 DepartmentId = 2,
-                Gender = rGender.Male,
+                Gender = eGender.Male,
                 PhotoPath = "images/max.png"
             }, new eEmployee {
                 Id = 4,
@@ -78,7 +80,7 @@ public class CompanyDbContext : DbContext
                 Email = "wesleykemp@gmail.com",
                 JoinDate = new DateTime(2015, 1, 2),
                 DepartmentId = 1,
-                Gender = rGender.Male,
+                Gender = eGender.Male,
                 PhotoPath = "images/wesley.png"
             }
         );
