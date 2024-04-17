@@ -55,3 +55,8 @@ https://github.com/kanaanayt/venkat/blob/91fdfd94831b8247bd16758ec6bf3d2d6f78371
 dotnet ef migrations add InitialCreate --project src/EMS.Api
 dotnet ef database update --project src/EMS.Api
 ``` 
+
+## Backend Repository
+### Department and Employee
+https://github.com/kanaanayt/venkat/blob/de88d313adca2758066616d2da184ab1e1bf18e6/src/EMS.Api/BackendRepository/IDepartmentRepository.cs#L5-L12
+https://github.com/kanaanayt/venkat/blob/de88d313adca2758066616d2da184ab1e1bf18e6/src/EMS.Api/BackendRepository/IEmployeeRepository.cs#L5-L13
