@@ -41,7 +41,7 @@ https://github.com/kanaanayt/venkat/blob/ee8cb27550baab96904ecf09f6ed94d5d96481f
 
 ## Db Context 
 ### Scaffolding
-https://github.com/kanaanayt/venkat/blob/ca8c4719832805c647b6b9c7a51b977d07796fff/src/EMS.Api/Data/CompanyDbContext.cs#L6-L22
+https://github.com/kanaanayt/venkat/blob/e950c6451aa1efea041c65f3cee1e5a7449b908a/src/EMS.Api/Data/CompanyDbContext.cs#L6-L22
 ### Seeding
 https://github.com/kanaanayt/venkat/blob/91fdfd94831b8247bd16758ec6bf3d2d6f78371c/src/EMS.Api/Data/CompanyDbContext.cs#L24-L86
 ### Dependency Injection
