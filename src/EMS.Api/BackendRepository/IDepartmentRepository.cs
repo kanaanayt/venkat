@@ -4,9 +4,9 @@ namespace EMS.Api.BackendRepository;
 
 public interface IDepartmentRepository
 {
-    Task<IEnumerable<rDepartment>> GetDepartments();
-    Task<rDepartment> GetDepartment(int departmentId);
-    Task AddDepartment(eDepartment department);
-    Task DeleteDepartment(int departmentId);
-    Task UpdateDepartment(eDepartment department);
+    Task<IEnumerable<rDepartment>> GetDepartmentsAsync();
+    Task<rDepartment> GetDepartmentAsync(int departmentId);
+    Task AddDepartmentAsync(eDepartment department);
+    Task DeleteDepartmentAsync(int departmentId);
+    Task UpdateDepartmentAsync(eDepartment department);
 }

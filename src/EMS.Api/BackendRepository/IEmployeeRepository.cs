@@ -4,10 +4,10 @@ namespace EMS.Api.BackendRepository;
 
 public interface IEmployeeRepository
 {
-    Task<IEnumerable<rEmployee>> GetAllEmployees();
-    Task<IEnumerable<rEmployee>> GetDepartmentEmployees(int departmentId);
-    Task<eEmployee> GetEmployee(int employeeId);
-    Task AddEmployee(int departmentId, eEmployee employee);
-    Task DeleteEmployee(int employeeId);
-    Task UpdateEmployee(eEmployee employee);
+    Task<IEnumerable<rEmployee>> GetAllEmployeesAsync();
+    Task<IEnumerable<rEmployee>> GetDepartmentEmployeesAsync(int departmentId);
+    Task<eEmployee> GetEmployeeAsync(int employeeId);
+    Task AddEmployeeAsync(int departmentId, eEmployee employee);
+    Task DeleteEmployeeAsync(int employeeId);
+    Task UpdateEmployeeAsync(eEmployee employee);
 }
