@@ -15,6 +15,6 @@ public interface ICompanyRepository
     Task<IEnumerable<eEmployee>> GetDepartmentEmployeesAsync(int departmentId);
     Task<eEmployee?> GetEmployeeAsync(int departmentId, int employeeId);
     Task AddEmployeeAsync(int departmentId, eEmployee employee);
-    Task DeleteEmployeeAsync(int employeeId);
-    Task UpdateEmployeeAsync(eEmployee employee);
+    Task DeleteEmployeeAsync(int departmentId, int employeeId);
+    Task UpdateEmployeeAsync(int departmentId, eEmployee employee);
 }
