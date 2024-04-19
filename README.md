@@ -57,6 +57,4 @@ dotnet ef database update --project src/EMS.Api
 ``` 
 
 ## Backend Repository
-### Department and Employee
-https://github.com/kanaanayt/venkat/blob/228d6caeba1e0016eabe47efebdd98e189e7a3e9/src/EMS.Api/BackendRepository/IDepartmentRepository.cs#L5-L12
-https://github.com/kanaanayt/venkat/blob/228d6caeba1e0016eabe47efebdd98e189e7a3e9/src/EMS.Api/BackendRepository/IEmployeeRepository.cs#L5-L13
+https://github.com/kanaanayt/venkat/blob/77d94fe02ca3f85812f36ec96ce4340b094a3d4b/src/EMS.Api/BackendRepository/ICompanyRepository.cs#L5-L20
