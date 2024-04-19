@@ -31,7 +31,7 @@ public class CompanyRepository : ICompanyRepository
 
     public async Task DeleteDepartmentAsync(int departmentId)
     {
-        var department = GetDepartmentAsync(departmentId);
+        var department = await GetDepartmentAsync(departmentId);
         if (department == null) return;
         _context.Remove(department);
         await _context.SaveChangesAsync();
@@ -59,26 +59,57 @@ public class CompanyRepository : ICompanyRepository
 
     public async Task<IEnumerable<eEmployee>> GetDepartmentEmployeesAsync(int departmentId)
     {
-        return await _context.Employees.Where(e => e.DepartmentId == departmentId).ToListAsync();
+        if (await DepartmentExists(departmentId))
+        {
+            return await _context.Employees.Where(e => e.DepartmentId == departmentId).ToListAsync();
+        }
+        
+        return Enumerable.Empty<eEmployee>();
     }
 
     public async Task<eEmployee?> GetEmployeeAsync(int departmentId, int employeeId)
     {
-        return await _context.Employees.SingleOrDefaultAsync(e => e.DepartmentId == departmentId);
+        if (await DepartmentExists(departmentId))
+        {
+            return await _context.Employees.SingleOrDefaultAsync(e =>
+                e.DepartmentId == departmentId && e.Id == employeeId);
+        }
+
+        return null;
     }
 
-    public Task AddEmployeeAsync(int departmentId, eEmployee employee)
+    public async Task AddEmployeeAsync(int departmentId, eEmployee employee)
     {
-        var department = 
+        if (await DepartmentExists(departmentId))
+        {
+            var department = await GetDepartmentAsync(departmentId);
+            department.Employees.Add(employee);
+            _context.SaveChangesAsync();
+        }
     }
 
-    public Task DeleteEmployeeAsync(int employeeId)
+    public async Task DeleteEmployeeAsync(int departmentId, int employeeId)
     {
-        throw new NotImplementedException();
+        if (await DepartmentExists(departmentId))
+        {
+            var department = await GetDepartmentAsync(departmentId);
+            var employee = await GetEmployeeAsync(departmentId, employeeId);
+            department.Employees.Remove(employee);
+            _context.SaveChangesAsync();
+        }
     }
 
-    public Task UpdateEmployeeAsync(eEmployee employee)
+    public async Task UpdateEmployeeAsync(int departmentId, eEmployee employee)
     {
-        throw new NotImplementedException();
+        if (await DepartmentExists(departmentId))
+        {
+            var match = await GetEmployeeAsync(departmentId, employee.Id);
+            match.FirstName = employee.FirstName;
+            match.PhotoPath = employee.PhotoPath;
+            match.JoinDate = employee.JoinDate;
+            match.Email = employee.Email;
+            match.Gender = employee.Gender;
+            match.LastName = employee.LastName;
+        }
     }
 }
