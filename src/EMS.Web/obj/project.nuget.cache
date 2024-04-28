@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "X3XeiJpeNh+/4jOgOkwe4/VXSi/2ZoH58j/rrYxmprnd0oxJ2LzAJeRpbxuJOx2sh8sfuPSvUOuyY5gHssjMSw==",
+  "dgSpecHash": "wox8jICQp85Dl7i4VK6E3AUvGdP4g6H8EVNPYf6eWnU6/kNkrCip0zQld6Vbr4VpLfZuMJ2N6lcLhxsAN0lfAQ==",
   "success": true,
-  "projectFilePath": "/Users/kanaan/Documents/GitHub/venkat/src/EMS.Web/EMS.Web.csproj",
+  "projectFilePath": "/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Web/EMS.Web.csproj",
   "expectedPackageFiles": [
     "/Users/kanaan/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/kanaan/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
