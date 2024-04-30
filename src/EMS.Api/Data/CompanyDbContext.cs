@@ -34,7 +34,7 @@ public class CompanyDbContext : DbContext
                 LastName = "Smith",
                 Email = "johnsmith@gmail.com",
                 JoinDate = new DateTime(2020, 12, 24),
-                Gender = eGender.Male,
+                Gender = Gender.Male,
                 DepartmentId = 1,
                 PhotoPath = "images/harry.png" 
             }, new eEmployee {
@@ -43,7 +43,7 @@ public class CompanyDbContext : DbContext
                 LastName = "Sutherland",
                 Email = "marysutherland@gmail.com",
                 JoinDate = new DateTime(2022, 4, 21),
-                Gender = eGender.Female,
+                Gender = Gender.Female,
                 DepartmentId = 2,
                 PhotoPath = "images/mary.png"
             }, new eEmployee {
@@ -52,7 +52,7 @@ public class CompanyDbContext : DbContext
                 LastName = "Fallon",
                 Email = "samfallon@gmail.com",
                 JoinDate = new DateTime(2023, 8, 14),
-                Gender = eGender.Other,
+                Gender = Gender.Other,
                 DepartmentId = 3,
                 PhotoPath = "images/sam.png"
             }, new eEmployee {
@@ -62,7 +62,7 @@ public class CompanyDbContext : DbContext
                 Email = "finharrington@gmail.com",
                 JoinDate = new DateTime(2019, 5, 2),
                 DepartmentId = 3,
-                Gender = eGender.Male,
+                Gender = Gender.Male,
                 PhotoPath = "images/harry.png"
             }, new eEmployee {
                 Id = 5,
@@ -71,7 +71,7 @@ public class CompanyDbContext : DbContext
                 Email = "maxsnipe@gmail.com",
                 JoinDate = new DateTime(2017, 9, 2),
                 DepartmentId = 2,
-                Gender = eGender.Male,
+                Gender = Gender.Male,
                 PhotoPath = "images/max.png"
             }, new eEmployee {
                 Id = 6,
@@ -80,7 +80,7 @@ public class CompanyDbContext : DbContext
                 Email = "wesleykemp@gmail.com",
                 JoinDate = new DateTime(2015, 1, 2),
                 DepartmentId = 1,
-                Gender = eGender.Male,
+                Gender = Gender.Male,
                 PhotoPath = "images/wesley.png"
             }
         );

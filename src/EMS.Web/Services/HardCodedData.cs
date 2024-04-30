@@ -61,7 +61,7 @@ public static class HardCodedData
                 LastName = "Smith",
                 Email = "johnsmith@gmail.com",
                 JoinDate = new DateTime(2020, 12, 24),
-                Gender = rGender.Male,
+                Gender = Gender.Male,
                 DepartmentId = 1,
                 PhotoPath = "images/harry.png"
             },
@@ -72,7 +72,7 @@ public static class HardCodedData
                 LastName = "Sutherland",
                 Email = "marysutherland@gmail.com",
                 JoinDate = new DateTime(2022, 4, 21),
-                Gender = rGender.Female,
+                Gender = Gender.Female,
                 DepartmentId = 2,
                 PhotoPath = "images/mary.png"
             },
@@ -83,7 +83,7 @@ public static class HardCodedData
                 LastName = "Fallon",
                 Email = "samfallon@gmail.com",
                 JoinDate = new DateTime(2023, 8, 14),
-                Gender = rGender.Other,
+                Gender = Gender.Other,
                 DepartmentId = 3,
                 PhotoPath = "images/sam.png"
             },
@@ -95,7 +95,7 @@ public static class HardCodedData
                 Email = "finharrington@gmail.com",
                 JoinDate = new DateTime(2019, 5, 2),
                 DepartmentId = 3,
-                Gender = rGender.Male,
+                Gender = Gender.Male,
                 PhotoPath = "images/harry.png"
             },
             new rEmployee
@@ -106,7 +106,7 @@ public static class HardCodedData
                 Email = "maxsnipe@gmail.com",
                 JoinDate = new DateTime(2017, 9, 2),
                 DepartmentId = 2,
-                Gender = rGender.Male,
+                Gender = Gender.Male,
                 PhotoPath = "images/max.png"
             },
             new rEmployee
@@ -117,7 +117,7 @@ public static class HardCodedData
                 Email = "wesleykemp@gmail.com",
                 JoinDate = new DateTime(2015, 1, 2),
                 DepartmentId = 1,
-                Gender = rGender.Male,
+                Gender = Gender.Male,
                 PhotoPath = "images/wesley.png"
             }
         };

@@ -9,7 +9,7 @@ public class cEmployee
 
     public DateTime JoinDate { get; set; }
 
-    public cGender Gender { get; set; }
+    public Gender Gender { get; set; }
 
     public int DepartmentId { get; set; }
 

@@ -1,6 +1,6 @@
 namespace EMS.Core;
 
-public enum cGender
+public enum Gender
 {
     Male,
 

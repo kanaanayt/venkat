@@ -16,7 +16,7 @@ public class eEmployee
 
     public DateTime JoinDate { get; set; }
 
-    public eGender Gender { get; set; }
+    public Gender Gender { get; set; }
 
     public int DepartmentId { get; set; }
     public eDepartment? Department { get; set; }
