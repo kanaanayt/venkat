@@ -14,9 +14,9 @@ public static class ContractMappings
         {
             Id = entity.Id,
             DepartmentName = entity.DepartmentName,
-            Employees = new Collection<rEmployee>(entity.Employees
-                                                        .Select(MapEntityToEmployee)
-                                                        .ToList())
+            Employees = entity.Employees
+                              .Select(MapEntityToEmployee)
+                              .ToList()
         };
     }
 
@@ -38,18 +38,17 @@ public static class ContractMappings
             Email = entity.Email,
             JoinDate = entity.JoinDate,
             Gender = entity.Gender,
-            DepartmentId = entity.DepartmentId
+            DepartmentId = entity.DepartmentId,
+            PhotoPath = entity.PhotoPath
         };
     }
 
     public static rEmployees MapEntitiesToEmployees(this IEnumerable<eEmployee> entities)
     {
-        return new rEmployees()
+        return new rEmployees
         {
             Items = entities.Select(MapEntityToEmployee)
         };
     }
-
-
 }
 
