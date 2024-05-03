@@ -50,5 +50,29 @@ public static class ContractMappings
             Items = entities.Select(MapEntityToEmployee)
         };
     }
+
+    public static eDepartment MapCreateToEntity(this cDepartment department)
+    {
+        return new eDepartment
+        {
+            DepartmentName = department.DepartmentName
+        };
+    }
+
+
+    public static eEmployee MapCreateToEntity(this cEmployee employee)
+    {
+         return new eEmployee
+         {
+            FirstName = employee.FirstName,
+            LastName = employee.LastName,
+            Email = employee.Email,
+            JoinDate = employee.JoinDate,
+            Gender = employee.Gender,
+            DepartmentId = employee.DepartmentId,
+            PhotoPath = employee.PhotoPath
+         };
+    }
 }
+
 

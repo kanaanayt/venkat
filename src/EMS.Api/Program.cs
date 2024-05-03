@@ -12,6 +12,7 @@ builder.Services.AddDbContext<CompanyDbContext>(options =>
     options.UseSqlite(builder.Configuration["ConnectionStrings:SqliteDb"]);
 });
 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

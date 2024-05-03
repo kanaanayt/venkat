@@ -29,20 +29,22 @@ public class CompanyRepository : ICompanyRepository
         await _context.SaveChangesAsync();
     }
 
-    public async Task DeleteDepartmentAsync(int departmentId)
+    public async Task<bool> DeleteDepartmentAsync(int departmentId)
     {
         var department = await GetDepartmentAsync(departmentId);
-        if (department == null) return;
+        if (department == null) return false;
         _context.Remove(department);
         await _context.SaveChangesAsync();
+        return true;
     }
 
-    public async Task UpdateDepartmentAsync(eDepartment department)
+    public async Task<bool> UpdateDepartmentAsync(eDepartment department)
     {
         var match = await GetDepartmentAsync(department.Id);
-        if (match == null) return;
+        if (match == null) return false;
         match.DepartmentName = department.DepartmentName;
         await _context.SaveChangesAsync();
+        return true;
     }
 
     public async Task<bool> DepartmentExists(int departmentId)
@@ -83,33 +85,46 @@ public class CompanyRepository : ICompanyRepository
         if (await DepartmentExists(departmentId))
         {
             var department = await GetDepartmentAsync(departmentId);
+            if (department == null) return;
             department.Employees.Add(employee);
-            _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
         }
     }
 
-    public async Task DeleteEmployeeAsync(int departmentId, int employeeId)
+    public async Task<bool> DeleteEmployeeAsync(int departmentId, int employeeId)
     {
         if (await DepartmentExists(departmentId))
         {
             var department = await GetDepartmentAsync(departmentId);
+            if (department == null) return false;
+
             var employee = await GetEmployeeAsync(departmentId, employeeId);
+            if (employee == null) return false;
+            
             department.Employees.Remove(employee);
-            _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
+            return true;
         }
+        return false;
     }
 
-    public async Task UpdateEmployeeAsync(int departmentId, eEmployee employee)
+    public async Task<bool> UpdateEmployeeAsync(
+        int departmentId, int employeeId, eEmployee employee)
     {
         if (await DepartmentExists(departmentId))
         {
-            var match = await GetEmployeeAsync(departmentId, employee.Id);
+            var match = await GetEmployeeAsync(departmentId, employeeId);
+
+            if (match == null) return false;
+
             match.FirstName = employee.FirstName;
+            match.LastName = employee.LastName;
             match.PhotoPath = employee.PhotoPath;
             match.JoinDate = employee.JoinDate;
             match.Email = employee.Email;
             match.Gender = employee.Gender;
-            match.LastName = employee.LastName;
         }
+
+        return true;
     }
 }

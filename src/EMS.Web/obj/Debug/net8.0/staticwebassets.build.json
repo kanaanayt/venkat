@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "EPOH8s8mVt6gfMPRANcN6PWZnDZSuqUzGooWCxIOOKU=",
+  "Hash": "2GsQFOhywXsy6qekCPfYwz84qeSd+gH/rbsp3ZKTtek=",
   "Source": "EMS.Web",
   "BasePath": "_content/EMS.Web",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Api/EMS.Api.csproj",
+      "Version": 2,
+      "Source": "EMS.Api",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
   "DiscoveryPatterns": [
     {
       "Name": "EMS.Web/wwwroot",

@@ -1,5 +1,6 @@
 using AutoMapper;
 using EMS.Api.BackendRepository;
+using EMS.Api.Mapping;
 using EMS.Core;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,33 +19,52 @@ public class DepartmentsController : ControllerBase
         _mapper = mapper;
     }
 
-    [HttpGet(Name = "GetDept")]
-    public async Task<ActionResult<IEnumerable<rDepartment>>> GetDepartments()
+    [HttpGet]
+    public async Task<ActionResult<rDepartments>> GetDepartments()
     {
         var entities = await _repo.GetDepartmentsAsync();
-        return Ok(_mapper.Map<IEnumerable<rDepartment>>(entities));
+        return Ok(entities.MapEntitiesToDepartments());
     }
 
-    [HttpGet("id")]
+    [HttpGet("{id}", Name = "GetDept")]
     public async Task<ActionResult<rDepartment>> GetDepartment(int id)
     {
         var entity = await _repo.GetDepartmentAsync(id);
-        return Ok(_mapper.Map<rDepartment>(entity));
+
+        if (entity == null) return NotFound();
+
+        return Ok(entity.MapEntityToDepartment());
     }
 
     [HttpPost]
-    public async Task<ActionResult<rDepartment>> AddDepartment(cDepartment department)
+    public async Task<ActionResult<eDepartment>> AddDepartment(cDepartment department)
     {
-        var entity = _mapper.Map<eDepartment>(department);
+        var entity = department.MapCreateToEntity();
         await _repo.AddDepartmentAsync(entity);
-        var dto = _mapper.Map<rDepartment>(entity);
         return CreatedAtRoute(
             "GetDept",
             new
             {
                 Id = entity.Id,
             },
-            dto);
+            entity);
     }
 
+    [HttpPut("{id}")]
+    public async Task<IActionResult> UpdateDepartment(cDepartment department, int id)
+    {
+        var entity = department.MapCreateToEntity();
+        entity.Id = id;
+        var updated = await _repo.UpdateDepartmentAsync(entity);
+        if (!updated) return NotFound();
+        return NoContent();
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteDepartment(int id)
+    {
+        var deleted = await _repo.DeleteDepartmentAsync(id);
+        if (!deleted) return NotFound();
+        return NoContent();
+    }
 }
