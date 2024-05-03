@@ -11,7 +11,7 @@ builder.Services.AddDbContext<CompanyDbContext>(options =>
 {
     options.UseSqlite(builder.Configuration["ConnectionStrings:SqliteDb"]);
 });
-
+builder.Services.AddControllers();
 
 var app = builder.Build();
 
@@ -23,5 +23,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.MapControllers();
 
 app.Run();
