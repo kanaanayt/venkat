@@ -1,3 +1,4 @@
+using EMS.Api.BackendRepository;
 using EMS.Api.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,6 +12,9 @@ builder.Services.AddDbContext<CompanyDbContext>(options =>
 {
     options.UseSqlite(builder.Configuration["ConnectionStrings:SqliteDb"]);
 });
+
+builder.Services.AddTransient<ICompanyRepository, CompanyRepository>();
+
 builder.Services.AddControllers();
 
 var app = builder.Build();

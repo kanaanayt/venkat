@@ -11,12 +11,10 @@ namespace EMS.Api.Controllers;
 public class DepartmentsController : ControllerBase
 {
     private readonly ICompanyRepository _repo;
-    private readonly IMapper _mapper;
     
-    public DepartmentsController(ICompanyRepository repo, IMapper mapper)
+    public DepartmentsController(ICompanyRepository repo)
     {
         _repo = repo;
-        _mapper = mapper;
     }
 
     [HttpGet]
