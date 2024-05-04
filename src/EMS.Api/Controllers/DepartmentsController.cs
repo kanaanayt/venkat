@@ -21,6 +21,7 @@ public class DepartmentsController : ControllerBase
     public async Task<ActionResult<rDepartments>> GetDepartments()
     {
         var entities = await _repo.GetDepartmentsAsync();
+        if (entities == null) return new rDepartments();
         return Ok(entities.MapEntitiesToDepartments());
     }
 

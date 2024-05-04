@@ -6,7 +6,7 @@ public class rDepartment
 
     public string DepartmentName { get; set; }
 
-    public ICollection<rEmployee> Employees { get; set; }
+    public ICollection<rEmployee> Employees { get; set; } = Enumerable.Empty<rEmployee>().ToList();
 
     public int DepartmentSize => Employees.Count;
 }
