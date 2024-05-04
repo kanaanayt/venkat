@@ -15,12 +15,14 @@ public class CompanyRepository : ICompanyRepository
 
     public async Task<IEnumerable<eDepartment>> GetDepartmentsAsync()
     {
-        return await _context.Departments.Include(d => d.Employees).ToListAsync();
+        return await _context.Departments.ToListAsync();
     }
 
     public async Task<eDepartment?> GetDepartmentAsync(int departmentId)
     {
-        return await _context.Departments.SingleOrDefaultAsync(d => d.Id == departmentId);
+        return await _context.Departments
+                             .Include(d => d.Employees)
+                             .SingleOrDefaultAsync(d => d.Id == departmentId);
     }
 
     public async Task AddDepartmentAsync(eDepartment department)
@@ -109,7 +111,7 @@ public class CompanyRepository : ICompanyRepository
     }
 
     public async Task<bool> UpdateEmployeeAsync(
-        int departmentId, int employeeId, eEmployee employee)
+        int departmentId, int employeeId, cEmployee employee)
     {
         if (await DepartmentExists(departmentId))
         {
@@ -123,6 +125,8 @@ public class CompanyRepository : ICompanyRepository
             match.JoinDate = employee.JoinDate;
             match.Email = employee.Email;
             match.Gender = employee.Gender;
+
+            await _context.SaveChangesAsync();
         }
 
         return true;

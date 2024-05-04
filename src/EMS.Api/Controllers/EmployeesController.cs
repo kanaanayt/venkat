@@ -64,8 +64,7 @@ public class EmployeesController : ControllerBase
     public async Task<IActionResult> UpdateEmployee(
         int departmentId, int employeeId, cEmployee employee)
     {
-        var entity = employee.MapCreateToEntity();
-        var updated = await _repo.UpdateEmployeeAsync(departmentId, employeeId, entity); 
+        var updated = await _repo.UpdateEmployeeAsync(departmentId, employeeId, employee); 
         if (!updated) return NotFound();
         return NoContent();
     }

@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using EMS.Api.BackendRepository;
 using EMS.Api.Data;
 using Microsoft.EntityFrameworkCore;
@@ -15,7 +16,8 @@ builder.Services.AddDbContext<CompanyDbContext>(options =>
 
 builder.Services.AddTransient<ICompanyRepository, CompanyRepository>();
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(options => 
+    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
 var app = builder.Build();
 

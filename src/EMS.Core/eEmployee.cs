@@ -19,6 +19,8 @@ public class eEmployee
     public Gender Gender { get; set; }
 
     public int DepartmentId { get; set; }
+
+    [ForeignKey("DepartmentId")]
     public eDepartment? Department { get; set; }
 
     public string PhotoPath { get; set; } = string.Empty;

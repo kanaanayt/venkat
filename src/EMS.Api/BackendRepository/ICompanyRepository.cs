@@ -16,5 +16,5 @@ public interface ICompanyRepository
     Task<eEmployee?> GetEmployeeAsync(int departmentId, int employeeId);
     Task AddEmployeeAsync(int departmentId, eEmployee employee);
     Task<bool> DeleteEmployeeAsync(int departmentId, int employeeId);
-    Task<bool> UpdateEmployeeAsync(int departmentId, int employeeId, eEmployee employee);
+    Task<bool> UpdateEmployeeAsync(int departmentId, int employeeId, cEmployee employee);
 }
