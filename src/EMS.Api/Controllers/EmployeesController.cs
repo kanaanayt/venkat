@@ -47,7 +47,7 @@ public class EmployeesController : ControllerBase
         var entities = await _repo.Search(search);
         return entities.MapEntitiesToEmployees();
     }
-
+        
     [HttpPost]
     public async Task<ActionResult<eEmployee>> AddEmployee(
         int departmentId, cEmployee employee)
