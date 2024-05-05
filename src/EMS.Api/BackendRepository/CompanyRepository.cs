@@ -82,6 +82,14 @@ public class CompanyRepository : ICompanyRepository
         return null;
     }
 
+    public async Task<IEnumerable<eEmployee>> Search(string search)
+    {
+         IQueryable<eEmployee> query = _context.Employees;
+         query = query.Where(e => e.FirstName.Contains(search)
+         || e.LastName.Contains(search));
+         return await query.ToListAsync();
+    }
+
     public async Task AddEmployeeAsync(int departmentId, eEmployee employee)
     {
         if (await DepartmentExists(departmentId))

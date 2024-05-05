@@ -1,3 +1,4 @@
+using EMS.Api.Controllers;
 using EMS.Core;
 
 namespace EMS.Api.BackendRepository;
@@ -14,6 +15,7 @@ public interface ICompanyRepository
     Task<IEnumerable<eEmployee>> GetAllEmployeesAsync();
     Task<IEnumerable<eEmployee>> GetDepartmentEmployeesAsync(int departmentId);
     Task<eEmployee?> GetEmployeeAsync(int departmentId, int employeeId);
+    Task<IEnumerable<eEmployee>> Search(string search);
     Task AddEmployeeAsync(int departmentId, eEmployee employee);
     Task<bool> DeleteEmployeeAsync(int departmentId, int employeeId);
     Task<bool> UpdateEmployeeAsync(int departmentId, int employeeId, cEmployee employee);
