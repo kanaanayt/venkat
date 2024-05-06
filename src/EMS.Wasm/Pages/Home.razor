@@ -1,7 +1,28 @@
 ﻿@page "/"
+@using EMS.Core
 
 <PageTitle>Home</PageTitle>
 
 <h1>Hello, world!</h1>
 
 Welcome to your new app.
+
+@if (departments != null)
+{
+    @foreach (var d in departments.Items)
+    {
+        @d.DepartmentName
+    }
+}
+@code
+{
+    [Inject] Services.ApiClient _client { get; set; }
+
+    public rDepartments departments { get; set; } = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        departments = await _client.GetDepartments();
+    }
+
+}

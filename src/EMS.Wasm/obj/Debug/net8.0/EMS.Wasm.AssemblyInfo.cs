@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EMS.Wasm")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+570296bed72f5ef4b186020c9020cc61e65977e6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b66cceb73fe2f74656e31a5e1a736feb5149109")]
 [assembly: System.Reflection.AssemblyProductAttribute("EMS.Wasm")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EMS.Wasm")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
