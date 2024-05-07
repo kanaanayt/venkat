@@ -1,3 +1,4 @@
+using System.Reflection.Emit;
 using EMS.Api.Data;
 using EMS.Core;
 using Microsoft.EntityFrameworkCore;
@@ -138,5 +139,10 @@ public class CompanyRepository : ICompanyRepository
         }
 
         return true;
+    }
+
+    public async Task<bool> ValidateEmail(string email)
+    {
+        return !await _context.Employees.AnyAsync(e => e.Email.Contains(email));
     }
 }

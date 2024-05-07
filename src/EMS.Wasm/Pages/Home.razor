@@ -14,15 +14,23 @@ Welcome to your new app.
         @d.DepartmentName
     }
 }
+
+@if (d != null)
+{
+    @d.DepartmentName
+}
 @code
 {
     [Inject] Services.ApiClient _client { get; set; }
 
     public rDepartments departments { get; set; } = new();
 
+    public rDepartment d { get; set; } = new();
+
     protected override async Task OnInitializedAsync()
     {
         departments = await _client.GetDepartments();
+        d = await _client.GetDepartment(2);
     }
 
 }

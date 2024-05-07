@@ -23,16 +23,19 @@ public class ApiClient : IEmployeesService, IDepartmentService
         throw new NotImplementedException();
     }
 
-    public Task<rDepartment> GetDepartment(int id)
+    public async Task<rDepartment> GetDepartment(int id)
     {
-        throw new NotImplementedException();
+        string body = await _httpClient.GetStringAsync("api/departments/id");
+        Console.WriteLine(body);
+        return new rDepartment();
+        // var rDepartment = await _httpClient.GetFromJsonAsync<rDepartment>("api/departments/id");
+        // return rDepartment;
     }
 
     public async Task<rDepartments> GetDepartments()
     {
         var departments = await _httpClient.GetFromJsonAsync<rDepartments>("api/departments");
-        if (departments != null) return departments;
-        return new rDepartments();
+        return departments!;
     }
 
     public Task UpdateDepartment(cDepartment department, int id)

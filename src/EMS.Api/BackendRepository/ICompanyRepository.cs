@@ -19,4 +19,6 @@ public interface ICompanyRepository
     Task AddEmployeeAsync(int departmentId, eEmployee employee);
     Task<bool> DeleteEmployeeAsync(int departmentId, int employeeId);
     Task<bool> UpdateEmployeeAsync(int departmentId, int employeeId, cEmployee employee);
+
+    Task<bool> ValidateEmail(string email);
 }
