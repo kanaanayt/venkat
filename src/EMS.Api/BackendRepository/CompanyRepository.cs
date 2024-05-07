@@ -86,8 +86,9 @@ public class CompanyRepository : ICompanyRepository
     public async Task<IEnumerable<eEmployee>> Search(string search)
     {
          IQueryable<eEmployee> query = _context.Employees;
-         query = query.Where(e => e.FirstName.Contains(search)
-         || e.LastName.Contains(search));
+         query = query.Where(e => 
+            e.FirstName.Contains(search)
+            || e.LastName.Contains(search));
          return await query.ToListAsync();
     }
 

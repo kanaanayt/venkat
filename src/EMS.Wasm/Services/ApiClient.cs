@@ -1,3 +1,4 @@
+using System.Reflection.Emit;
 using System.Net;
 using System.Net.Http.Json;
 using EMS.Core;
@@ -15,21 +16,22 @@ public class ApiClient : IEmployeesService, IDepartmentService
 
     public Task AddDepartment(cDepartment department)
     {
-        throw new NotImplementedException();
+        return _httpClient.PostAsJsonAsync("api/departments", department);
     }
 
-    public Task DeleteDepartment(int id)
+    public async Task DeleteDepartment(int id)
     {
-        throw new NotImplementedException();
+        await _httpClient.DeleteFromJsonAsync<rDepartment>($"api/departments/{id}");
     }
 
     public async Task<rDepartment> GetDepartment(int id)
     {
-        string body = await _httpClient.GetStringAsync("api/departments/id");
-        Console.WriteLine(body);
-        return new rDepartment();
-        // var rDepartment = await _httpClient.GetFromJsonAsync<rDepartment>("api/departments/id");
-        // return rDepartment;
+        var response = await _httpClient.GetAsync($"api/departments/{id}");
+        if (response.StatusCode == HttpStatusCode.NotFound)
+        {
+            return new rDepartment();
+        }
+        return await response.Content.ReadFromJsonAsync<rDepartment>();
     }
 
     public async Task<rDepartments> GetDepartments()
@@ -38,43 +40,49 @@ public class ApiClient : IEmployeesService, IDepartmentService
         return departments!;
     }
 
-    public Task UpdateDepartment(cDepartment department, int id)
+    public async Task UpdateDepartment(cDepartment department, int id)
     {
-        throw new NotImplementedException();
+        await _httpClient.PutAsJsonAsync($"api/departments/{id}", department);
     }
 
-        public Task AddEmployee()
+    public async Task AddEmployee(int departmentId, cEmployee employee)
     {
-        throw new NotImplementedException();
+        await _httpClient.PostAsJsonAsync($"api/departments/{departmentId}/employees", employee);
     }
 
-    public Task DeleteEmployee()
+    public async Task DeleteEmployee(int departmentId, int employeeId)
     {
-        throw new NotImplementedException();
+        await _httpClient.DeleteFromJsonAsync<rEmployee>($"api/departments/{departmentId}/employees/{employeeId}");
     }
 
-    public Task<IEnumerable<rEmployees>> GetAllEmployees()
+    public async Task<rEmployees> GetAllEmployees()
     {
-        throw new NotImplementedException();
+        return await _httpClient.GetFromJsonAsync<rEmployees>("api/employees");
     }
 
-    public Task<rEmployees> GetDepartmentDemployees(int id)
+    public async Task<rEmployees> GetDepartmentEmployees(int departmentId)
     {
-        throw new NotImplementedException();
+        return await _httpClient.GetFromJsonAsync<rEmployees>($"api/departments/{departmentId}/employees");
     }
 
     public Task<rEmployee> GetEmployee(int departmentId, int employeeId)
     {
-        throw new NotImplementedException();
+        var response = await _httpClient.GetAsync($"api/employees/{id}");
+        if (response.StatusCode == HttpStatusCode.NotFound)
+        {
+            return new rEmployee();
+        }
+        return response.Content.ReadFromJsonAsync<rEmployee>();
     }
 
-    public Task<rEmployees> Search(string search)
+    public async Task<rEmployees> Search(string employeeName)
     {
-        throw new NotImplementedException();
+        return await _httpClient.GetFromJsonAsync<rEmployees>($"api/employees/search?search={employeeName}");
     }
 
-    public Task UpdateEmployee()
+    public async Task UpdateEmployee(int departmentId, int employeeId, cEmployee employee)
     {
-        throw new NotImplementedException();
+        await _httpClient.PutAsJsonAsync($"api/departments/{departmentId}/employees/{employeeId}", employee);
+
     }
 }
