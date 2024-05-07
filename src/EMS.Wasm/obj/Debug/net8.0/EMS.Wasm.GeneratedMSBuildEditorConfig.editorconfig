@@ -30,6 +30,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Wasm/Pages/EmployeeList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRW1wbG95ZWVMaXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Wasm/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

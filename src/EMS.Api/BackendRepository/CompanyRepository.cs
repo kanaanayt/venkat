@@ -16,7 +16,7 @@ public class CompanyRepository : ICompanyRepository
 
     public async Task<IEnumerable<eDepartment>> GetDepartmentsAsync()
     {
-        return await _context.Departments.ToListAsync();
+        return await _context.Departments.Include(d => d.Employees).ToListAsync();
     }
 
     public async Task<eDepartment?> GetDepartmentAsync(int departmentId)

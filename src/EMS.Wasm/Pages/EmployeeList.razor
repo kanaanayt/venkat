@@ -1,0 +1,48 @@
+@page "/employees"
+@using EMS.Core
+@using EMS.Wasm.Services
+@using EMS.Web.Services;
+
+@if (Departments == null)  return;
+
+@foreach (var department in Departments.Items)
+{
+    <div class="container-fluid">
+        <div class="row">
+            <h2>Department @department.Id</h2>
+            <h2>@department.DepartmentName</h2>
+            <h2>totals @department.DepartmentSize employees</h2>
+        </div>
+        <div class="card-deck container-w50 row">
+            
+            @foreach (var employee in department.Employees)
+            {
+                <div class="card m-4" style="width: 18rem;">
+                    <div class="card-header">
+                        <h5>@employee.FullName</h5>
+                        <h5>@(Departments.Items.SingleOrDefault(d => d.Id == employee.DepartmentId).DepartmentName)</h5>
+                    </div>
+                    
+                    <img class="card-img-top" src=@employee.PhotoPath>
+                    
+                    <div class="card-footer text-center">
+                        <a href="#" class="btn btn-primary">View</a>
+                        <a href="#" class="btn btn-primary">Edit</a>
+                        <a href="#" class="btn btn-danger">Delete</a>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+}
+
+@code
+{
+    [Inject] ApiClient HttpClient { get; set; }
+    public rDepartments Departments { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        Departments = await HttpClient.GetDepartments();
+    }
+}

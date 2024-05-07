@@ -65,14 +65,14 @@ public class ApiClient : IEmployeesService, IDepartmentService
         return await _httpClient.GetFromJsonAsync<rEmployees>($"api/departments/{departmentId}/employees");
     }
 
-    public Task<rEmployee> GetEmployee(int departmentId, int employeeId)
+    public async Task<rEmployee> GetEmployee(int departmentId, int employeeId)
     {
-        var response = await _httpClient.GetAsync($"api/employees/{id}");
+        var response = await _httpClient.GetAsync($"api/departments/{departmentId}/employees/{employeeId}");
         if (response.StatusCode == HttpStatusCode.NotFound)
         {
-            return new rEmployee();
+            return await Task.FromResult(new rEmployee());
         }
-        return response.Content.ReadFromJsonAsync<rEmployee>();
+        return await response.Content.ReadFromJsonAsync<rEmployee>();
     }
 
     public async Task<rEmployees> Search(string employeeName)
