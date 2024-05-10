@@ -26,12 +26,32 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Wasm/Pages/AddDepartment.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRkRGVwYXJ0bWVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Wasm/Pages/AddEmployee.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRkRW1wbG95ZWUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Wasm/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Wasm/Pages/EmployeeList.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRW1wbG95ZWVMaXN0LnJhem9y
+[/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Wasm/Pages/DepartmentPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRGVwYXJ0bWVudFBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Wasm/Pages/DepartmentsPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRGVwYXJ0bWVudHNQYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Wasm/Pages/EditEmployee.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRWRpdEVtcGxveWVlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Wasm/Pages/EmployeePage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRW1wbG95ZWVQYWdlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Wasm/Pages/Home.razor]

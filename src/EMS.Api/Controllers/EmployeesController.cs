@@ -52,9 +52,7 @@ public class EmployeesController : ControllerBase
     public async Task<ActionResult<eEmployee>> AddEmployee(
         int departmentId, cEmployee employee)
     {
-        if (departmentId != employee.DepartmentId) return NotFound();
-
-        eEmployee entity = employee.MapCreateToEntity();
+        eEmployee entity = employee.MapCreateToEntity(departmentId);
         await _repo.AddEmployeeAsync(departmentId, entity);
 
         return CreatedAtRoute(

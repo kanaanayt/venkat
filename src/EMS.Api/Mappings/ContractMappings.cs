@@ -60,7 +60,7 @@ public static class ContractMappings
     }
 
 
-    public static eEmployee MapCreateToEntity(this cEmployee employee)
+    public static eEmployee MapCreateToEntity(this cEmployee employee, int departmentId)
     {
          return new eEmployee
          {
@@ -69,7 +69,7 @@ public static class ContractMappings
             Email = employee.Email,
             JoinDate = employee.JoinDate,
             Gender = employee.Gender,
-            DepartmentId = employee.DepartmentId,
+            DepartmentId = departmentId,
             PhotoPath = employee.PhotoPath
          };
     }

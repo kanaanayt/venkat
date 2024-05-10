@@ -1,0 +1,24 @@
+@page "/departments/add"
+@using EMS.Core
+@using EMS.Wasm.Services
+
+<EditForm Model="@Department" OnValidSubmit="Submit">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+    <InputText @bind-Value="Department.DepartmentName" />
+</EditForm>
+
+@code
+{
+    [Inject] ApiClient Client { get; set; }
+
+    [Inject] NavigationManager NavigationManager { get; set; }
+
+    public cDepartment Department { get; set; }
+
+    public async void Submit()
+    {
+        await Client.AddDepartment(Department);
+        
+    }
+}

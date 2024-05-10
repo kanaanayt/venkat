@@ -1,0 +1,30 @@
+@page "/departments/{departmentId:int}/employees/add"
+@using EMS.Core
+@using EMS.Wasm.Services
+
+<EditForm Model="@Employee" OnValidSubmit="Submit">
+    <InputText @bind-Value="Employee.FirstName" />
+    <InputText @bind-Value="Employee.LastName" />
+    <InputText @bind-Value="Employee.Email" />
+    <InputDate @bind-Value="Employee.JoinDate" />
+    <InputText @bind-Value="Employee.PhotoPath" />
+    <div><button type="submit">Submit</button></div>
+</EditForm>
+
+
+
+@code
+{
+    [Parameter] public int departmentId { get; set; }
+
+    [Inject] ApiClient Client { get; set; }
+
+    public cEmployee Employee { get; set; } = new();
+
+    private async Task Submit()
+    {
+        await Client.AddEmployee(departmentId, Employee);
+    }
+
+
+}

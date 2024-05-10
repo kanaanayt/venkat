@@ -1,4 +1,4 @@
-@page "/employees"
+@page "/departments"
 @using EMS.Core
 @using EMS.Wasm.Services
 @using EMS.Web.Services;
@@ -10,7 +10,12 @@
     <div class="container-fluid">
         <div class="row">
             <h2>Department @department.Id</h2>
-            <h2>@department.DepartmentName</h2>
+
+            <h2>
+                <a href=@($"/departments/{department.Id}")>
+                    @department.DepartmentName
+                </a>
+            </h2>
             <h2>totals @department.DepartmentSize employees</h2>
         </div>
         <div class="card-deck container-w50 row">
@@ -24,18 +29,13 @@
                     </div>
                     
                     <img class="card-img-top" src=@employee.PhotoPath>
-                    
-                    <div class="card-footer text-center">
-                        <a href="#" class="btn btn-primary">View</a>
-                        <a href="#" class="btn btn-primary">Edit</a>
-                        <a href="#" class="btn btn-danger">Delete</a>
-                    </div>
                 </div>
             }
 
         </div>
     </div>
 }
+<a href="/departments/add" class="btn btn-primary">Add New Department</a>
 
 @code
 {

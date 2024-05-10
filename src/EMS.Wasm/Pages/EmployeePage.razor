@@ -1,0 +1,29 @@
+@page "/departments/{departmentId:int}/employees/{employeeId:int}"
+@using EMS.Core
+@using EMS.Wasm.Services
+
+@if (employee == null) return;
+
+<div>
+    <img src=@($"employee.PhotoPath")/>
+    <h3>Employee: @employee.FullName</h3>
+    <h3>Email: @employee.Email</h3>
+    <h3>Join date: @employee.JoinDate</h3>
+    <h3>Department #: @employee.DepartmentId</h3>
+</div>
+
+@code
+{
+    [Inject] public ApiClient _client { get; set; }
+
+    [Parameter] public int EmployeeId { get; set; }
+    [Parameter] public int DepartmentId { get; set; }
+
+    private rEmployee employee { get; set; } = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var employee = _client.GetEmployee(DepartmentId, EmployeeId);
+    }
+
+}

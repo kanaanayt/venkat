@@ -1,0 +1,41 @@
+@page "/departments/{id:int}"
+@using EMS.Core
+@using EMS.Wasm.Services
+
+<div class="card-deck container-w50 row">
+    @foreach (var employee in Department.Employees)
+    {
+        <div class="card m-4" style="width: 18rem;">
+            <div class="card-header">
+                <h5>@employee.FullName</h5>
+            </div>
+            
+            <img class="card-img-top" src=@employee.PhotoPath>
+            
+            <div class="card-footer text-center">
+                <a 
+                    href=@($"/departments/{Department.Id}/employees/{employee.Id}")
+                    class="btn btn-primary">View</a>
+                <a 
+                    href=@($"/departments/{Department.Id}/employees/{employee.Id}/edit")
+                    class="btn btn-primary">Edit</a>
+                <a href="#" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+    }
+</div>
+<a href=@($"/departments/{Department.Id}/employees/add") class="btn btn-primary">Add Employee</a>
+@code
+
+{
+    [Parameter] public int Id { get; set; }
+
+    [Inject] ApiClient _client { get; set; }
+
+    public rDepartment Department { get; set; } = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Department = await _client.GetDepartment(Id);
+    }
+}

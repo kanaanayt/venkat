@@ -10,7 +10,7 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 
 var baseAddress = builder.Configuration["BaseUrl"];
 
-builder.Services.AddScoped(sp => 
+builder.Services.AddTransient(sp => 
     new HttpClient 
     { 
         BaseAddress = new Uri(baseAddress) 
