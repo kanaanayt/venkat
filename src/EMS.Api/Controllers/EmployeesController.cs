@@ -1,5 +1,6 @@
 using System.Reflection.Emit;
 using EMS.Api.BackendRepository;
+using EMS.Api.Filters;
 using EMS.Api.Mapping;
 using EMS.Core;
 using Microsoft.AspNetCore.Mvc;
@@ -49,6 +50,7 @@ public class EmployeesController : ControllerBase
     }
         
     [HttpPost]
+    [DuplicateEmailActionFilter]
     public async Task<ActionResult<eEmployee>> AddEmployee(
         int departmentId, cEmployee employee)
     {

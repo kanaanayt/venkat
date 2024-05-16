@@ -2,23 +2,31 @@
 @using EMS.Core
 @using EMS.Wasm.Services
 
-<EditForm Model="@Department" OnValidSubmit="Submit">
+<EditForm Model=@Department OnSubmit="Submit">
     <DataAnnotationsValidator/>
     <ValidationSummary/>
     <InputText @bind-Value="Department.DepartmentName" />
+    <button type="submit">Add</button>
 </EditForm>
+@ErrorMessage
 
 @code
 {
+    public string ErrorMessage { get; set; } = null;
     [Inject] ApiClient Client { get; set; }
 
     [Inject] NavigationManager NavigationManager { get; set; }
 
-    public cDepartment Department { get; set; }
+    public cDepartment Department { get; set; } = new();
 
     public async void Submit()
     {
-        await Client.AddDepartment(Department);
+        var validation = await Client.AddDepartment(Department);
+        if (validation == null) return;
+        else
+        {
+            ErrorMessage = validation;
+        }
         
     }
 }

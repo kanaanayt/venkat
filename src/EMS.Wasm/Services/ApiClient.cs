@@ -1,8 +1,11 @@
+using System.Runtime.Serialization;
 using System.Reflection.Emit;
 using System.Net;
 using System.Net.Http.Json;
 using EMS.Core;
 using EMS.Web.Services;
+using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace EMS.Wasm.Services;
 
@@ -14,9 +17,14 @@ public class ApiClient : IEmployeesService, IDepartmentService
         this._httpClient = httpClient;
     }
 
-    public Task AddDepartment(cDepartment department)
+    public async Task<string> AddDepartment(cDepartment department)
     {
-        return _httpClient.PostAsJsonAsync("api/departments", department);
+        var response = await _httpClient.PostAsJsonAsync("api/departments", department);
+        if (response.StatusCode == HttpStatusCode.NotFound)
+        {
+            return await response.Content.ReadAsStringAsync();
+        }
+        return null;
     }
 
     public async Task DeleteDepartment(int id)
@@ -45,9 +53,14 @@ public class ApiClient : IEmployeesService, IDepartmentService
         await _httpClient.PutAsJsonAsync($"api/departments/{id}", department);
     }
 
-    public async Task AddEmployee(int departmentId, cEmployee employee)
+    public async Task<string> AddEmployee(int departmentId, cEmployee employee)
     {
-        await _httpClient.PostAsJsonAsync($"api/departments/{departmentId}/employees", employee);
+        var response = await _httpClient.PostAsJsonAsync($"api/departments/{departmentId}/employees", employee);
+        if (response.StatusCode == HttpStatusCode.BadRequest)
+        {
+            return await response.Content.ReadAsStringAsync();
+        }
+        return null;
     }
 
     public async Task DeleteEmployee(int departmentId, int employeeId)

@@ -3,12 +3,27 @@
 @using EMS.Wasm.Services
 
 <EditForm Model="@Employee" OnValidSubmit="Submit">
-    <InputText @bind-Value="Employee.FirstName" />
-    <InputText @bind-Value="Employee.LastName" />
-    <InputText @bind-Value="Employee.Email" />
-    <InputDate @bind-Value="Employee.JoinDate" />
-    <InputText @bind-Value="Employee.PhotoPath" />
-    <div><button type="submit">Submit</button></div>
+    <div class="form-group m-3">
+        <label>First Name</label>
+        <InputText class="form-control" @bind-Value="Employee.FirstName" />
+    </div>
+    <div class="form-group m-3">
+        <label>Last Name</label>
+        <InputText class="form-control" @bind-Value="Employee.LastName" />
+    </div>
+    <div class="form-group m-3">
+        <label>Email</label>
+        <InputText class="form-control" @bind-Value="Employee.Email" />
+    </div>
+    <div class="form-group m-3">
+        <label>Join Date</label>
+        <InputDate class="form-control" @bind-Value="Employee.JoinDate" />
+    </div>
+    <div class="form-group m-3">
+        <label>Photo Path</label>
+        <InputText class="form-control" @bind-Value="Employee.PhotoPath" />
+    </div>
+    <div class="form-group m-3"><button type="submit">Submit</button></div>
 </EditForm>
 
 
@@ -22,7 +37,7 @@
 
     //public cEmployee Employee { get; set; } = new();
 
-    public rEmployee Employee { get; set; }
+    public rEmployee Employee { get; set; } = new();
 
     protected override async Task OnInitializedAsync()
     {

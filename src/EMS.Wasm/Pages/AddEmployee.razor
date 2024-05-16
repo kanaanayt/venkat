@@ -1,11 +1,19 @@
 @page "/departments/{departmentId:int}/employees/add"
 @using EMS.Core
 @using EMS.Wasm.Services
+@using Newtonsoft.Json
+@using Newtonsoft.Json.Linq
 
 <EditForm Model="@Employee" OnValidSubmit="Submit">
     <InputText @bind-Value="Employee.FirstName" />
     <InputText @bind-Value="Employee.LastName" />
     <InputText @bind-Value="Employee.Email" />
+    @if (Error != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            @Error
+        </div>
+    }
     <InputDate @bind-Value="Employee.JoinDate" />
     <InputText @bind-Value="Employee.PhotoPath" />
     <div><button type="submit">Submit</button></div>
@@ -21,10 +29,18 @@
 
     public cEmployee Employee { get; set; } = new();
 
+    private string Error = null;
+
     private async Task Submit()
     {
-        await Client.AddEmployee(departmentId, Employee);
+        var response = await Client.AddEmployee(departmentId, Employee);
+        if (response != null)
+        {
+            var jObject = JObject.Parse(response);
+            JToken token = jObject["email"];
+            if (token == null) return;
+            Error = token[0].ToString();
+            return;
+        }
     }
-
-
 }

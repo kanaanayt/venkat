@@ -1,3 +1,7 @@
 {
-    "dotnet.defaultSolution": "EMS.sln"
+    "dotnet.defaultSolution": "EMS.sln",
+    "editor.tokenColorCustomizations": {
+        "comments": "",
+        "textMateRules": []
+    }
 }

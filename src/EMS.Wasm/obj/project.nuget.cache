@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "hLu70Dz/ca7LAhEh9UtuqtRZOyCXlGrAZ4eZG8R/g3kBGu5lcVyPtq+RFYMvZZ0PaE9xJqMCioJTGiZ15jOzKQ==",
+  "dgSpecHash": "BVwhxyeM2xeDEvygaiwKsYzdbrKfoxst2iZ7/NR1reeIFtt+raLJXMxv6aY96nfU6Kp/4MsrU/sLIPF6SRZQig==",
   "success": true,
   "projectFilePath": "/Users/kanaan/Documents/Extracurricular/Code/Github/venkat/src/EMS.Wasm/EMS.Wasm.csproj",
   "expectedPackageFiles": [
@@ -30,6 +30,7 @@
     "/Users/kanaan/.nuget/packages/microsoft.jsinterop.webassembly/8.0.3/microsoft.jsinterop.webassembly.8.0.3.nupkg.sha512",
     "/Users/kanaan/.nuget/packages/microsoft.net.illink.tasks/8.0.3/microsoft.net.illink.tasks.8.0.3.nupkg.sha512",
     "/Users/kanaan/.nuget/packages/microsoft.net.sdk.webassembly.pack/8.0.3/microsoft.net.sdk.webassembly.pack.8.0.3.nupkg.sha512",
+    "/Users/kanaan/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
     "/Users/kanaan/.nuget/packages/system.io.pipelines/8.0.0/system.io.pipelines.8.0.0.nupkg.sha512",
     "/Users/kanaan/.nuget/packages/system.text.encodings.web/8.0.0/system.text.encodings.web.8.0.0.nupkg.sha512",
     "/Users/kanaan/.nuget/packages/system.text.json/8.0.0/system.text.json.8.0.0.nupkg.sha512",
